@@ -1,0 +1,182 @@
+
+Begin Material
+
+Material White
+
+Prop diffuseColor RGB 0.73 0.73 0.73
+
+Material Red
+
+Prop diffuseColor RGB 0.65 0.05, 0.05
+
+Material Green
+
+Prop diffuseColor RGB 0.12 0.45 0.15
+
+Material Phong 1
+Prop diffuseColor RGB 0.3 0.4 0.5
+Prop specularColor RGB 1 1 1
+Prop specularEx Float 10
+Prop ambientColor RGB 0.1 0.1 0.1
+
+# 铜 (Copper) - 红棕色金属
+# 金属材质：diffuseColor 设为黑色，颜色通过 F0 体现
+Material Copper 2
+Prop diffuseColor RGB 0.0 0.0 0.0
+Prop F0 RGB 0.955 0.638 0.538
+Prop roughness Float 0.3
+
+# 铁 (Iron) - 灰白色金属
+# 金属材质
+Material Iron 2
+Prop diffuseColor RGB 0.0 0.0 0.0
+Prop F0 RGB 0.531 0.512 0.496
+Prop roughness Float 0.4
+
+# 锡 (Tin) - 银白色金属
+# 金属材质
+Material Tin 2
+Prop diffuseColor RGB 0.0 0.0 0.0
+Prop F0 RGB 0.678 0.685 0.666
+Prop roughness Float 0.35
+
+# 碳 (Carbon/Graphite) - 深灰黑色，非金属特性
+# 非金属材质：漫反射率低，表面粗糙，整体呈黑色
+Material Carbon 2
+Prop diffuseColor RGB 0.05 0.05 0.05
+Prop F0 RGB 0.040 0.040 0.040
+Prop roughness Float 0.9
+
+# 金 (Gold) - 金黄色金属
+# 金属材质
+Material Gold 2
+Prop diffuseColor RGB 0.0 0.0 0.0
+Prop F0 RGB 1.000 0.766 0.336
+Prop roughness Float 0.2
+
+# 铝 (Aluminum) - 银白色金属
+# 金属材质
+Material Aluminum 2
+Prop diffuseColor RGB 0.0 0.0 0.0
+Prop F0 RGB 0.913 0.921 0.925
+Prop roughness Float 0.25
+
+End
+
+Begin Model
+
+Model Wall
+Translation 0.0 0.0 1028.0
+Plane LeftWall Red
+N  -1.0 0.0 0.0
+P 278.0 278.0 278.0
+U 0 -556.0 0
+V 0 0 -556.0
+
+Plane RightWall Green
+N 1.0 0.0 0.0
+P -278.0 278.0 278
+U 0 -556 0
+V 0 0 -556.0
+
+Plane TopWall White
+N 0.0 -1.0 0.0
+P 278.0 278.0 278
+U -556 0 0
+V 0 0 -556
+
+Plane BottomWall White
+N 0.0 1.0 0.0
+P 278.0 -278.0 278
+U -556 0 0
+V 0 0 -556
+
+Plane BackWall White
+N 0.0 0.0 -1.0
+P 278.0 278.0 278
+U -556 0 0
+V 0 -556 0
+
+End
+
+Begin Model
+
+Model CopperSphere
+Translation -150 -80 1100
+
+Sphere CopperBall Copper
+N 0 0 1
+P 0 0 0
+R 50
+
+End
+
+Begin Model
+
+Model IronSphere
+Translation 0 -80 1100
+
+Sphere IronBall Iron
+N 0 0 1
+P 0 0 0
+R 50
+
+End
+
+Begin Model
+
+Model TinSphere
+Translation 150 -80 1100
+
+Sphere TinBall Tin
+N 0 0 1
+P 0 0 0
+R 50
+
+End
+
+Begin Model
+
+Model CarbonSphere
+Translation -150 -180 950
+
+Sphere CarbonBall Carbon
+N 0 0 1
+P 0 0 0
+R 50
+
+End
+
+Begin Model
+
+Model GoldSphere
+Translation 0 -180 950
+
+Sphere GoldBall Gold
+N 0 0 1
+P 0 0 0
+R 50
+
+End
+
+Begin Model
+
+Model AluminumSphere
+Translation 150 -180 950
+
+Sphere AluminumBall Aluminum
+N 0 0 1
+P 0 0 0
+R 50
+
+End
+
+Begin Light
+
+Point TopLight
+# Intensity , radiance or irradiance Value
+IRV 1.0 1.0 1.0
+# Position
+P 0 273 900
+
+End

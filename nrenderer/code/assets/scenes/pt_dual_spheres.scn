@@ -1,0 +1,97 @@
+Begin Material
+
+Material White
+
+Prop diffuseColor RGB 0.725 0.71 0.68
+
+Material Red
+
+Prop diffuseColor RGB 0.63 0.065 0.05
+
+Material Green
+
+Prop diffuseColor RGB 0.14 0.45 0.091
+
+Material Mirror
+
+Prop diffuseColor RGB 0.95 0.95 0.95
+Prop reflective Float 1.0
+
+Material Glass
+
+Prop diffuseColor RGB 1 1 1
+Prop absorbed RGB 1 1 1
+Prop ior Float 1.5
+
+End
+
+Begin Model
+
+Model Walls
+Translation 0.0 0.0 1028.0
+
+Plane LeftWall Red
+N -1.0 0.0 0.0
+P 278.0 278.0 278.0
+U 0 -556.0 0
+V 0 0 -556.0
+
+Plane RightWall Green
+N 1.0 0.0 0.0
+P -278.0 278.0 278.0
+U 0 -556.0 0
+V 0 0 -556.0
+
+Plane TopWall White
+N 0.0 -1.0 0.0
+P 278.0 278.0 278.0
+U -556.0 0 0
+V 0 0 -556.0
+
+Plane BottomWall White
+N 0.0 1.0 0.0
+P 278.0 -278.0 278.0
+U -556.0 0 0
+V 0 0 -556.0
+
+Plane BackWall White
+N 0.0 0.0 -1.0
+P 278.0 278.0 278.0
+U -556.0 0 0
+V 0 -556.0 0
+
+End
+
+Begin Model
+
+Model GlassSphere
+Translation -90.0 -178.0 900.0
+
+Sphere Sphere Glass
+N 0 0 1
+P 0 0 0
+R 80
+
+End
+
+Begin Model
+
+Model MirrorSphere
+Translation 120.0 -178.0 1050.0
+
+Sphere Sphere Mirror
+N 0 0 1
+P 0 0 0
+R 65
+
+End
+
+Begin Light
+
+Area TopLight
+IRV 47.8384 38.5664 31.0808
+P 60 275 1088
+U -120 0 0
+V 0 0 -120
+
+End

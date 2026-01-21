@@ -1,0 +1,8 @@
+# 清理旧 build（我已执行）
+Remove-Item -Recurse -Force 'f:\code\CG\experiment\code\build'
+
+# 配置 x64
+cmake -S . -B build -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=Debug
+
+# 构建
+cmake --build build --config Debug --target NRenderer -j 8
